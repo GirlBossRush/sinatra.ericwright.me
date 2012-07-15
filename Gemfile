@@ -7,6 +7,7 @@ gem 'sinatra-simple-navigation'
 
 gem 'rufus-scheduler'
 
+gem 'heroku'
 
 gem 'slim'
 gem 'redcarpet'
