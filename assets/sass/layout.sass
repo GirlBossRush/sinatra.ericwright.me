@@ -98,6 +98,8 @@ h3
     border-bottom: 1px solid adjust-hue($transparent-accent, 150deg)
   &:nth-of-type(4)
     border-bottom: 1px solid adjust-hue($transparent-accent, 200deg)
+  &:nth-of-type(5)
+    border-bottom: 1px solid adjust-hue($transparent-accent, 250deg)
 
 h4
   font-size: 2em
@@ -254,6 +256,7 @@ strong
 
     &:hover
       width: 100%
+
     &:nth-child(2)
       background-color: adjust-hue($transparent-accent, 25deg)
     &:nth-child(3)
@@ -262,6 +265,8 @@ strong
       background-color: adjust-hue($transparent-accent, 150deg)
     &:nth-child(5)
       background-color: adjust-hue($transparent-accent, 200deg)
+    &:nth-child(6)
+      background-color: adjust-hue($transparent-accent, 250deg)
 
   .selected
     -border-right: 5px solid #fafafa
@@ -279,6 +284,10 @@ strong
 
   width: 100%
   display: block
+
+.subtle
+  &:hover
+    text-decoration: underline
 
 figure img
   background: transparentize($background, 0.3)
@@ -302,3 +311,13 @@ figure img
     font-size: 18px
   .logo
     font-size: 2.5em
+
+@media all and (max-width: 700px)
+  .logo
+    font-size: 2em
+
+  .content
+    border-right: none
+
+  .infotainment
+    display: none

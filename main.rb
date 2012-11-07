@@ -13,13 +13,9 @@ require 'pry' if development?
  Slim::Engine.set_default_options pretty: true, disable_escape: true
 
 def title_helper(prefix = '')
-  if !prefix.empty?
-    "#{prefix} : Eric Wright : Designer + Developer"
-  else
-    "Eric Wright : Designer + Developer"
-  end
+  base = "Eric Wright : Developer + Designer"
+  base.insert(0, prefix + ' : ') unless prefix.empty?
 end
-
 
 configure do
   Compass.configuration do |config|
@@ -38,23 +34,30 @@ end
 
   
 get '/' do
-  slim :index, :locals => { title: title_helper("who is") }
+  slim :index, locals: { title: title_helper("who is") }
 end
 
 get '/portfolio' do
-  slim :portfolio, :locals => { title: title_helper("portfolio") }
+  slim :portfolio, locals: { title: title_helper("portfolio") }
 end
 
 get '/contact' do
-  slim :contact, :locals => { title: title_helper("let's chat") }
+  slim :contact, locals: { title: title_helper("let's chat") }
 end
 
 get '/resume' do
   send_file('eric_wright_resume.pdf')
 end
 
+get '/resume.doc' do
+  send_file('eric_wright_resume.doc')
+end
 
 helpers do
+  def header_links(text, url)
+    link_to(text, url, class: "subtle") + link_to('@', url, class: "right glow") 
+  end
+
   def link_to(text, url, opts={})
     attributes = ""
     opts.each { |key,value| attributes << key.to_s << "=\"" << value.to_s << "\" "}
