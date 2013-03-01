@@ -24,6 +24,9 @@ $opacity: 0.3
 
 
 html, body
+  min-height: 100%
+
+body
   font:
     family: $body-font, sans-serif
     size: 20px
@@ -33,13 +36,12 @@ html, body
   -moz-font-smoothing: subpixel-antialiased
 
   color: $text
-  min-height: 100%
 
   padding-bottom: 10px
   background: $background
   background: url('/images/triangles.png')
 
-  border-top: 2px solid $accent
+  border-top: 4px solid $accent
 
 a
   text-decoration: none
@@ -328,6 +330,8 @@ strong
 
 // Mobile horizontal
 @media all and (max-width: 500px)
+  html, body
+    width: 100%
   .site-header
     .logo
       text-align: center
@@ -335,12 +339,26 @@ strong
     .title
       display: none
 
+  .content
+    display: block
+    width: 100%
+    margin: 0
+    padding: 0
+
   .site-nav
     display: block
     width: auto
-    ul
-      li
-        width: 95%
+    padding: 0
 
-        &:hover
-          width: 100%
+    .inner
+      position: static
+      width: auto
+      li
+        width: 90%
+
+
+  .infotainment
+    font-size: .7em
+
+    .important
+      font-size: 2.5em
