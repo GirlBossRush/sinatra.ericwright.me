@@ -5,9 +5,9 @@ gem 'sinatra-contrib'
 gem 'sinatra-mapping'
 gem 'sinatra-simple-navigation'
 
-gem 'rufus-scheduler'
+gem 'thin'
 
-gem 'heroku'
+gem 'rufus-scheduler'
 
 gem 'slim'
 gem 'redcarpet'
