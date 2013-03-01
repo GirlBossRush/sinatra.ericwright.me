@@ -32,13 +32,17 @@ get '/stylesheets/*.css' do
   sass stylesheet, :views => "#{settings.root}/assets/sass"
 end
 
-  
+
 get '/' do
   slim :index, locals: { title: title_helper("who is") }
 end
 
-get '/portfolio' do
-  slim :portfolio, locals: { title: title_helper("portfolio") }
+get '/work' do
+  slim :work, locals: { title: title_helper("work") }
+end
+
+get '/play' do
+  slim :play, locals: { title: title_helper("play") }
 end
 
 get '/contact' do
@@ -55,7 +59,7 @@ end
 
 helpers do
   def header_links(text, url)
-    link_to(text, url, class: "subtle") + link_to('@', url, class: "right glow") 
+    link_to(text, url, class: "subtle", target: '_blank') + link_to('@', url, class: "right glow")
   end
 
   def link_to(text, url, opts={})

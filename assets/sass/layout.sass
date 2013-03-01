@@ -19,21 +19,27 @@ $menu-link: white
 
 $opacity: 0.3
 
+*
+  +box-sizing(border-box)
+
+
 html, body
   font:
     family: $body-font, sans-serif
     size: 20px
+    smoothing: subpixel-antialiased
+
+  -webkit-font-smoothing: subpixel-antialiased
+  -moz-font-smoothing: subpixel-antialiased
+
   color: $text
+  min-height: 100%
 
-  height: 100%
-  width: 100%
-
+  padding-bottom: 10px
   background: $background
   background: url('/images/triangles.png')
 
   border-top: 2px solid $accent
-  +box-sizing(border-box)
-
 
 a
   text-decoration: none
@@ -45,6 +51,9 @@ a
     color: adjust-hue($link, 25deg)
   &:hover
     text-decoration: underline
+
+  &.phone-number
+    color: inherit
 
 abbr
   border-bottom: none
@@ -110,12 +119,10 @@ h5
   font-size: 2em
   font-weight: bold
 
-header
-  +box-sizing(border-box)
-
+.site-header
   width: 100%
-  height: 120px
 
+  margin-bottom: 20px
   padding: 10px 25px 10px 25px
 
 .infotainment
@@ -123,10 +130,10 @@ header
     family: $header-font, sans-serif
     size: 1.2em
 
-  padding: 50px 15px 0 20px
+  padding: 50px 35px 0 20px
+  min-width: 250px
   display: table-cell
-  width: 315px
-  
+
   ul, li
     list-style-type: none
 
@@ -155,11 +162,10 @@ p
 
   margin: 0 0 0 0px
   padding: 5px 10px
-  
+
   display: table-cell
-  +box-sizing(border-box)
   +box-shadow(1px 0 0 lighten($background, 15%))
-  
+
   ul
     margin-left: 25px
     list-style-type: none
@@ -177,7 +183,6 @@ p
       margin: 6px 8px 6px 0
 // The container keeps our floating elements from overflowing on the footer.
 .container
-  +box-sizing(border-box)
 
   margin: 0px
   padding: 0px
@@ -199,6 +204,7 @@ strong
 .center
   text-align: center
 
+
 .glow
   +text-shadow(0 0 10px $accent)
 
@@ -218,10 +224,10 @@ strong
 
   height: 100%
 
-.site-menu
+.site-nav
   vertical-align: top
   width: 200px
-  
+
   display: table-cell
 
   margin: 0 0 0 0
@@ -235,49 +241,51 @@ strong
 
     height: 100%
     width: 100%
-    display: inherit
 
-  li
-    font:
-      family: $accent-font, sans-serif
-      size: 1.3em
-    text-align: right
-    color: #000
-
-    background-color: $transparent-accent
-
-    width: 80%
-
-    margin: 0 0 10px 0
     padding: 5px 10px 5px 0
-    -o-transition: all 200ms ease-out
-    +transition(all 200ms ease-out)
-    +box-sizing(border-box)
 
-    &:hover
+    display: inline-block
+
+  .inner
+    position: fixed
+    width: 200px
+    li
+      font:
+        family: $accent-font, sans-serif
+        size: 1.3em
+      text-align: right
+      color: #000
+
+      background-color: $transparent-accent
+
+      width: 80%
+
+      margin: 0 0 10px 0
+      +transition(all 200ms ease-out)
+
+      &:hover
+        width: 100%
+
+      &:nth-child(2)
+        background-color: adjust-hue($transparent-accent, 25deg)
+      &:nth-child(3)
+        background-color: adjust-hue($transparent-accent, 100deg)
+      &:nth-child(4)
+        background-color: adjust-hue($transparent-accent, 150deg)
+      &:nth-child(5)
+        background-color: adjust-hue($transparent-accent, 200deg)
+      &:nth-child(6)
+        background-color: adjust-hue($transparent-accent, 250deg)
+
+    .selected
+      -border-right: 5px solid #fafafa
       width: 100%
-
-    &:nth-child(2)
-      background-color: adjust-hue($transparent-accent, 25deg)
-    &:nth-child(3)
-      background-color: adjust-hue($transparent-accent, 100deg)
-    &:nth-child(4)
-      background-color: adjust-hue($transparent-accent, 150deg)
-    &:nth-child(5)
-      background-color: adjust-hue($transparent-accent, 200deg)
-    &:nth-child(6)
-      background-color: adjust-hue($transparent-accent, 250deg)
-
-  .selected
-    -border-right: 5px solid #fafafa
-    width: 100%
 
 .right
   float: right
 
 .site-footer
   font-family: $header-font, sans-serif
-  +box-sizing(border-box)
 
   margin: 10px 0 0 0
   padding: 0 0 20px 10px
@@ -289,35 +297,50 @@ strong
   &:hover
     text-decoration: underline
 
-figure img
-  background: transparentize($background, 0.3)
-
-  border: 1px solid #fff
-  padding: 5px
-
-  width: 384px
-  height: 216px
-
 @media all and (max-width: 1400px)
-  html, body
-    font-size: 18px
-  .logo
-    font-size: 3em
+  .site-header
+    height: auto
+    .logo
+      font-size: 3em
   .site-menu
     width: 150px
 
-@media all and (max-width: 800px)
-  html, body
-    font-size: 18px
-  .logo
-    font-size: 2.5em
-
-@media all and (max-width: 700px)
-  .logo
-    font-size: 2em
+@media all and (max-width: 960px)
+  .site-header
+    .logo
+      font-size: 2.5em
 
   .content
     border-right: none
 
   .infotainment
-    display: none
+    display: block
+    text-align: center
+    margin: 0 10px
+    padding: 50px 15px
+    width: auto
+    border-top: 1px solid $accent
+
+    .blurb
+      text-align: left
+      margin: 0 20px
+      display: inline-block
+
+// Mobile horizontal
+@media all and (max-width: 500px)
+  .site-header
+    .logo
+      text-align: center
+      font-size: 1.5em
+    .title
+      display: none
+
+  .site-nav
+    display: block
+    width: auto
+    ul
+      li
+        width: 95%
+
+        &:hover
+          width: 100%
