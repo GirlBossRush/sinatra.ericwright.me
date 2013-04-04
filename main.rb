@@ -5,6 +5,7 @@ require 'sinatra/simple-navigation'
 require './config/scheduler'
 
 require 'slim'
+require 'redcarpet'
 require 'sass'
 require 'compass'
 
@@ -50,7 +51,7 @@ get '/contact' do
 end
 
 get '/resume' do
-  send_file('eric_wright_resume.pdf')
+  send_file('resume/eric_wright_resume.pdf')
 end
 
 get '/resume.doc' do
