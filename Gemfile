@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'eventmachine', '>=1.0.3'
+
 gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'sinatra-mapping'
