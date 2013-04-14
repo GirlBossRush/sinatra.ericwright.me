@@ -27,9 +27,13 @@ h1, h2 {
   letter-spacing: 0.09em;
 }
 
+h1 {
+  font-size: 2.4em
+}
+
 h3 {
   font-family: "Calibri", sans-serif;
-  color: #676600;
+  color: hsl(59, 100%, 10%);
   font-weight: normal;
 
   margin: 0.4em 0;

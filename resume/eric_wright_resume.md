@@ -1,28 +1,21 @@
 <header>
 
 # Eric Wright
-
-### (586)-944-9581
-### 21211 West Ten Mile Road, APT 707, Southfield, MI 48075
+## Software Engineer
+### (586)-944-9581 - Southfield, Michigan
 #### dev@ericwright.me - http://ericwright.me
 
 </header>
 
-<section id="mission">
-
-## Mission
-My mission is to create powerful web applications and memorable experiences.
-
-</section>
-
 <section id="education">
 
 ## Education
-Lawrence Technological University - May 2013
 
 **Bachelors of Computer Science** with a concentration in **business applications**.
 
 Minoring in **Business Management**.
+
+Lawrence Technological University - May 2013
 
 </section>
 
