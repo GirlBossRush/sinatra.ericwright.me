@@ -10,14 +10,19 @@ html(lang="en")
     meta(name="description" content="I make web. Eric Wright's portfolio site.")
     meta(name="keywords" content="Eric Wright, Eric James Wright, web developer, web design, Ruby on Rails, Heroku, Amazon, EC2")
     meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no")
+    meta(charset="utf-8")
 
     link(rel="icon" type="image/png" href="/favicon.png")
 
-  body
+  body(class=locals[:klass])
     == slim(:menu, layout: false)
 
     == yield
 
     == slim(:footer, layout: false)
 
-    script(type="text/javascript" src="scripts/ga.js")
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js")
+    script(src="scripts/ga.js")
+    script(src="scripts/blur.js")
+    javascript:
+      $('.box').blurjs({target: 'body', overlay: 'hsla(0,0%,100%, 0.5)', radius: 10, cache: true})

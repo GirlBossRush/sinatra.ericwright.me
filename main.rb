@@ -35,15 +35,15 @@ end
 
 
 get '/' do
-  slim :index, locals: { title: title_helper("1.44 MB of fun") }
+  slim :index, locals: { title: title_helper("1.44 MB of fun"), klass: 'index' }
 end
 
 get '/work' do
-  slim :work, locals: { title: title_helper("Work") }
+  slim :work, locals: { title: title_helper("Work"), klass: 'work' }
 end
 
 get '/play' do
-  slim :play, locals: { title: title_helper("Play") }
+  slim :play, locals: { title: title_helper("Play"), klass: 'play'}
 end
 
 get '/resume' do
