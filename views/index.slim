@@ -1,32 +1,16 @@
-section.content
-  markdown:
-    ### Oh hello
-    My name is Eric Wright and I like to make web applications.
-    I've been working professionally for #{Time.now.year - 2010} years and built a lot of #{link_to "cool stuff", "/play"}.
-
-    Let's #{link_to "get in touch", "/contact"} if you want to build something together.
-
-    ### I do other stuff too
-    I enjoy motorcycling and am studying Japanese.
-    I'm a big fan of Daft Punk, The Avalanches, Coheed and Cambria or anything with a progressive rock feel.
-
-
-aside.infotainment
-  .blurb
+aside.right-pane
+  section.box.hero-blurb
     markdown:
-      ##### development
-      * Ruby on Rails
-      * Backbone.js
-      * Node.js
-      * Heroku
-      * EC2/S3 + Chef
-  .blurb
-    markdown:
-      ##### design
-      * HTML5
-      * CSS3/SCSS
-      * Javascript/Coffeescript
-      * jquery + jQueryMobile
-      * Mobile Optimization
+      # I write software
+      My name is Eric Wright and I am a web developer.
+      I've been working professionally for three years and built a lot of cool stuff,
+      all available on #{link_to "Github", "https://github.com/ericwright90"}.
+      My #{link_to "resume", "/resume"} goes into detail if you're interested.
 
-  h5.glow.important == link_to "my résumé", "/resume", title: "Eric Wright's Resume"
+      ## We're trying to fill a position, have you worked with....
+      I like Rails, Backbone.js, or any of the cool software that shows up on Hacker News.
+
+      Creating software is about engineeering, not tools.
+      I have a strong understanding of HTML, Javascript, and CSS. I'm also experienced in Heroku and Amazon Cloud deployment.
+
+      #{mail_to "dev@ericwright.me", "Ask me about my floppy disks", subject: "What's up with those floppy disks?"}, if you want to get together and build something.

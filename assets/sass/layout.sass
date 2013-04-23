@@ -1,376 +1,93 @@
-@import 'compass/reset'
+@import 'normalize'
 @import 'compass'
 
-$background: #1b1b1b
-
-// Dark Gray
-$text: white
-$header-font: "Raleway"
-$accent-font: "Open Sans"
-$body-font: "Quicksand"
-$accent: #f75757
-
-// Pastel Red
-$transparent-accent: transparentize($accent, 0.3)
-$link: $accent
-$menu-link: white
-
-// White
-
-$opacity: 0.3
-
-*
-  +box-sizing(border-box)
+@import url(http://fonts.googleapis.com/css?family=Raleway:700|Open+Sans)
 
 
-html, body
-  min-height: 100%
+html
+  height: 100%
 
 body
+  +box-sizing(border-box)
+  background:
+    image: url('/images/ceo_bg.png')
+    size: cover
+    repeat: no-repeat
+    attachment: fixed
   font:
-    family: $body-font, sans-serif
+    family: "Open Sans", sans-serif
     size: 18px
-    smoothing: subpixel-antialiased
 
-  -webkit-font-smoothing: subpixel-antialiased
-  -moz-font-smoothing: subpixel-antialiased
+  padding: 20px
+  line-height: 25px
 
-  color: $text
+h1, h2, h3
+  font-family: "Raleway"
+  text-shadow: 0 0 20px hsl(0, 0%, 50%)
+h1
+  font:
+    size: 3.5em
+  line-height: 55px
 
-  padding-bottom: 10px
-  background: $background
-  background: url('/images/triangles.png')
-
-  border-top: 4px solid $accent
+h2
+  font:
+    size: 1.8em
+  line-height: 35px
 
 a
   text-decoration: none
-  outline: none
+  font-weight: bold
+  color: #000
 
-  &:link, &:hover &:active
-    color: $link
-  &:visited
-    color: adjust-hue($link, 25deg)
   &:hover
     text-decoration: underline
 
-  &.phone-number
-    color: inherit
 
-abbr
-  border-bottom: none
-
-article
-  margin-bottom: 45px
-
-hr
-  border: 0
-  border-bottom: 1px solid #aaa
-
-aside
-  li
-    color: $text
-
-blockquote
-  margin: 10px 0
-
-  p
-    margin: 0
-    padding: 0
-
-em
-  font-style: italic
-
-h1, h2, h3, h4, h5
-  font:
-    family: $header-font, sans-serif
-  +text-shadow(1px 1px 0px lighten($background, 25%))
-
-  a:link, a:visited, a:hover, a:active
-    font-weight: normal
-    text-decoration: none
-    color: $menu-link
-
-h1
-  font-size: 3.5em
-  font-weight: bold
-
-h2
-  font-size: 3.5em
-  font-weight: normal
-
-h3
-  font:
-    size: 2.5em
-    weight: bold
-  line-height: 90%
-
-  &:nth-of-type(1)
-    border-bottom: 1px solid adjust-hue($transparent-accent, 25deg)
-  &:nth-of-type(2)
-    border-bottom: 1px solid adjust-hue($transparent-accent, 100deg)
-  &:nth-of-type(3)
-    border-bottom: 1px solid adjust-hue($transparent-accent, 150deg)
-  &:nth-of-type(4)
-    border-bottom: 1px solid adjust-hue($transparent-accent, 200deg)
-  &:nth-of-type(5)
-    border-bottom: 1px solid adjust-hue($transparent-accent, 250deg)
-
-h4
-  font-size: 2em
-  font-weight: normal
-  margin: 5px
-
-h5
-  font-size: 2em
-  font-weight: bold
-
-.site-header
-  width: 100%
-
-  margin-bottom: 20px
-  padding: 10px 25px 10px 25px
-
-.infotainment
-  font:
-    family: $header-font, sans-serif
-    size: 1.2em
-
-  padding: 50px 35px 0 20px
-  min-width: 250px
-  display: table-cell
-
-  ul, li
-    list-style-type: none
-
-li
-  color: $text
-
-  margin: 4px 0
-  padding-left: 2px
-
-
-ul
-  margin: 10px 0px 20px 0px
-
-p
-  margin: 15px 0
-  padding: 10px 5px
-  line-height: 26px
-
-  &:first-child
-    margin-top: 0
-    padding-top: 0
-
-.content
-  vertical-align: top
-  font-size: 1.1em
-
-  background: transparent
-
-  border-right: 4px solid $accent
-
-  margin: 0 0 0 0px
-  padding: 5px 10px
-
-  display: table-cell
-  +box-shadow(1px 0 0 lighten($background, 15%))
-
-  ul
-    margin-left: 25px
-    list-style-type: none
-
-  li
-    -background-image: url(image-path('bullet.png')) no-repeat 7px 7px transparent
-    -margin: 7px 0
-
-    &:before
-      background-color: $accent
-      width: 7px
-      height: 7px
-      display: inline-block
-      content: ''
-      margin: 6px 8px 6px 0
-// The container keeps our floating elements from overflowing on the footer.
-.container
-
-  margin: 0px
-  padding: 0px
-
-  width: 100%
-
-  &:after
-    clear: both
-
-strong
-  font-weight: bold
-  +text-shadow(0 0 20px $accent)
-
-.important
-  font-weight: bold
-  a:link, a:visited, a:hover, a:active
-    font-weight: bold
-
-.center
-  text-align: center
-
-
-.glow
-  +text-shadow(0 0 10px $accent)
-
-  &:hover
-    +text-shadow(0 0 30px adjust-hue($accent, 25deg))
-    color: darken($text, 10%)
-    text-decoration: underline
-
-.left
-  float: left
-
-.logo
-  font:
-    family: $header-font, sans-serif
-    size: 3.5em
-    weight: bold
-
-  height: 100%
-
-.site-nav
-  vertical-align: top
-  width: 200px
-
-  display: table-cell
-
-  margin: 0 0 0 0
-  padding-right: 20px
-
-  a:link, a:visited, a:hover, a:active
-    font-weight: normal
-    text-decoration: none
-
-    color: $menu-link
-
-    height: 100%
-    width: 100%
-
-    padding: 5px 10px 5px 0
-
-    display: inline-block
-
-  .inner
-    position: fixed
-    width: 200px
-    li
-      font:
-        family: $accent-font, sans-serif
-        size: 1.3em
-      text-align: right
-      color: #000
-
-      background-color: $transparent-accent
-
-      width: 80%
-
-      margin: 0 0 10px 0
-      +transition(all 200ms ease-out)
-
-      &:hover
-        width: 100%
-
-      &:nth-child(2)
-        background-color: adjust-hue($transparent-accent, 25deg)
-      &:nth-child(3)
-        background-color: adjust-hue($transparent-accent, 100deg)
-      &:nth-child(4)
-        background-color: adjust-hue($transparent-accent, 150deg)
-      &:nth-child(5)
-        background-color: adjust-hue($transparent-accent, 200deg)
-      &:nth-child(6)
-        background-color: adjust-hue($transparent-accent, 250deg)
-
-    .selected
-      -border-right: 5px solid #fafafa
-      width: 100%
-
-.right
+.right-pane
+  width: 480px
   float: right
 
-.site-footer
-  font-family: $header-font, sans-serif
+  &.expanded
+    width: 680px
 
-  margin: 10px 0 0 0
-  padding: 0 0 20px 10px
+.box
+  background-color: hsla(0, 0%, 100%, 0.5)
+  padding: 2px 18px
+  border: 1px solid transparent
+  border-radius: 3px
 
-  width: 100%
-  display: block
+  margin-top: 25px
+  margin-bottom: 25px
 
-.subtle
-  &:hover
-    text-decoration: underline
+.site-nav
+  position: fixed
+  top: 0
+  left: 0
 
-@media all and (max-width: 1400px)
-  .site-header
-    height: auto
-    .logo
-      font-size: 3em
-  .site-menu
-    width: 150px
+  font:
+    size: 1.2em
 
-@media all and (max-width: 960px)
-  .site-header
-    .logo
-      font-size: 2.5em
+  ul
+    padding: 0
+    margin: 0
 
-  .site-nav
-    .inner
-      position: static
-
-  .content
-    border-right: none
-
-  .infotainment
-    display: block
-    text-align: center
-    margin: 0 10px
-    padding: 50px 15px
-    width: auto
-    border-top: 1px solid $accent
-
-    .blurb
-      text-align: left
-      margin: 0 20px
+    li
+      list-style-type: none
       display: inline-block
 
-// Mobile horizontal
+      a
+        display: inline-block
+        padding: 6px 8px
+        color: #fff
+        text-decoration: none
+        font-weight: normal
+
+        &:hover, &.selected
+          +transition-property(background-color)
+          +transition-duration(250ms)
+
+          background-color: hsla(0, 0%, 8%, 0.5)
 @media all and (max-width: 500px)
-  html, body
+  .right-pane
+    float: none
     width: 100%
-  .site-header
-    .logo
-      text-align: center
-      font-size: 1.5em
-    .title
-      display: none
-
-  .content
-    display: block
-    width: 100%
-    margin: 0
-    padding: 0
-
-  .site-nav
-    display: block
-    width: auto
-    padding: 0
-
-    .inner
-      position: static
-      width: auto
-      li
-        width: 90%
-
-
-  .infotainment
-    font-size: .7em
-
-    .important
-      font-size: 2.5em
