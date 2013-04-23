@@ -84,6 +84,13 @@ ul
     padding: 0
     margin: 0
 
+    // I know this looks silly.
+    // The menu will unhighlight the current page when hovering over other links.
+    // However, we still want the highlight effect when the user highlights the current page link.
+    &:hover li a.selected
+      background-color: transparent
+      &:hover
+        background-color: hsla(0, 0%, 8%, 0.5)
     li
       list-style-type: none
       display: inline-block
@@ -94,12 +101,16 @@ ul
         color: #fff
         text-decoration: none
         font-weight: normal
+        border-bottom: 3px solid transparent
 
-        &:hover, &.selected
+        &.selected
+          background-color: hsla(0, 0%, 8%, 0.5)
+        &:hover
           +transition-property(background-color)
           +transition-duration(250ms)
-
+          border-bottom: 3px solid transparent
           background-color: hsla(0, 0%, 8%, 0.5)
+
 @media all and (max-width: 700px)
   .right-pane, .right-pane.expanded
     float: none
