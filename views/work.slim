@@ -2,79 +2,55 @@ aside.right-pane.expanded
   section.box
     markdown:
       # #{header_links "Boardwalk", "http://boardwalk.io"}
-      Boardwalk is a personal website framework built to encourage vanity.
-      Users can create their own board to fill with blog posts, photos, and other customizable widgets.
+      Boardwalk is a personal website framework built to encourage vanity and sharing.
+      Users can create their own whiteboard to fill with blog posts and photos.
       The layout is free form and custom to each user.
-      The only limitation is the size of the board.
-      Boardwalk is #{link_to("open source", "https://github.com/ericwright90/boardwalk", target: '_blank')} and currently in **alpha testing**.
+      Boardwalk is #{link_to("open source", "https://github.com/ericwright90/boardwalk")} and currently in **beta testing**.
 
-      ## details
-      * Built with **Backbone.js**, using Ruby on Rails as a backend.
-      * **MongoDB**, using **Mongoid**.
-      * Deployed to **Heroku**.
-
-      ## features of interest
-      * Front end completely separated from back end implementation.
-      * **Built to scale**. The client does most of the heavy lifting, the server acts a dumb pipe to the database.
+      * Built with **Backbone.js**, using **Ruby on Rails** as a backend.
+      * Content stored with **MongoDB**, using **Mongoid**.
+      * **Built to scale**. The client does the heavy lifting, while Rails acts a pipe to the database.
 
       <hr>
       # #{header_links "Ichiban", "http://ichiban.so"}
-      Ichiban is an #{link_to("open source", "https://github.com/ericwright90/ichiban", target: '_blank')} imageboard software.
-      Inspired by 4chan's Yotsuba, Ichiban is an imageboard designed to retain the feel of its predecessors while fixing the usability issues that have plagued them.
+      Inspired by 4chan and Pintrest, Ichiban is an #{link_to("open source", "https://github.com/ericwright90/ichiban")} imageboard software.
+      Users can create topics centered around interesting images and retain anonymity.
       The layout attempts to reduce unnecessary distractions and **exemplify user content**.
-      Ichiban acts more like a board platform rather than a single imageboard.
       Users are free to make their own boards and delegate moderator status accordingly.
 
-      ## details
-      * Built with **Ruby on Rails**, using **PostgreSQL**.
-      * Deployed to **Heroku**.
-      * Images manipulated through #{link_to("Cloudinary", "http://http://cloudinary.com/", target: '_blank')}, managed through #{link_to("Carrierwave", "https://github.com/jnicklas/carrierwave", target: '_blank')}.
-
-      ## features of interest
-      * Tripcodes hashes identify users while retaining anonymity.
-      * Significantly easier to discern between anonymous users through tripcode colors.
-      * Board layout resizes to screen dimensions, attempting to show as much content as possible.
-      * Boards scroll infinitely, **incentivizing users to never leave**.
+      * Built with **Ruby on Rails** and deployed to **Heroku**.
+      * Boards reflow for any screen size through the **Isotope layout framework**.
+      * Posts scroll infinitely, **incentivizing users to never leave**.
 
       <hr>
       # #{header_links "Nirrius", "http://nirri.us"}
-      A complete server deployment and content management system implementation. Nirrius is #{link_to "open source", "https://github.com/nirrius/minecraft", target: "_blank"}.
-
-      ## responsibilities
-      * Minecraft server deployment via **Xen Hypervisor** with **CraftBukkit server framework**.
-      * Integrating billing system into game server software.
-      * Developed **RefineryCMS** front-end with blog engine and game server statistic integration.
-      * Managing **Ubuntu Linux** servers running often immature game server software with **99+%** uptime.
+      Nirrius was an online gaming community featuring a complete server deployment and CMS.
+      Nirrius focused on Minecraft server deployment via **Xen Hypervisor** with the **CraftBukkit server framework**.
+      I managed six **Ubuntu Linux** servers running immature game server software with **99+%** uptime.
+      Our #{link_to "first server", "http://puu.sh/iPX5"} still holds a special place in my heart.
 
       ## accomplishments
       * Built a **collocated** server designed for **reliable storage** and **scalability**.
       * Migrated systems to **Git revision control** for rapid deployment via **Xen**.
       * Created a bustling community with over **1,000 invitation requests**.
-      * Project reached financial stability in just **3 months** and profits in just **6 months**.
+      * Reached financial stability in just **3 months**, and profits in **6 months**.
 
       <hr>
       # #{header_links "SpeedySeat", "https://github.com/onthelist/onthelist"}
-      A front-house restaurant reservation and seating system. Speedyseat is no longer active, but is #{link_to('open source', 'https://github.com/onthelist/onthelist', target: '_blank')}.
-
-      ## responsibilities
-      * Page creation with **Jade** templating and **Sass**.
-      * Mobile optimization via **CSS media queries**.
-      * Deployment via **Chef** to Amazon's **EC2** and **S3** cloud platform.
+      SpeedySeat was a **bootstrapped startup** created to develop a front house restaurant reservation and seating software.
+      Using Amazon's cloud computing platform, SpeedySeat was developed for **rapid deployment** and **load balanced reliability**.
+      Speedyseat is no longer active, but is #{link_to('open source', 'https://github.com/onthelist/onthelist')}.
 
       ## accomplishments
       * Developed and deployed application to **3 restaurants in 3 months**.
-      * Corrected cross-browser issues.
-      * Deployed a rock solid **load balanced platform** for a **shared-nothing-architecture**.
+      * Created a rock solid **load balanced platform** for a **shared-nothing-architecture**.
 
       <hr>
       # #{header_links "Jolly Nap", "http://jollynap.com"}
       Jolly Nap is a sleep calculator optimized for mobile devices.
-
-      ## details
-      * Deployed to **Github Pages**
-      * Guard used to simplify compilation.
+      Jolly Nap calculates bed times and wake times so you don't spend your day groggy after programming for 9 hours straight.
 
       ## features of interest
+      * Deployed to **Github Pages**
       * Looks and feels like a native iOS application.
-      * Calculates bed times and wake times from user input.
 
