@@ -42,10 +42,6 @@ get '/work' do
   slim :work, locals: { title: title_helper("Work"), klass: 'work' }
 end
 
-get '/play' do
-  slim :play, locals: { title: title_helper("Play"), klass: 'play'}
-end
-
 get '/resume' do
   send_file('resume/eric_wright_resume.pdf')
 end
