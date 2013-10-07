@@ -17,4 +17,4 @@ gem 'redcarpet'
 gem 'sass'
 gem 'compass'
 
-gem 'pry'
+# gem 'pry'
