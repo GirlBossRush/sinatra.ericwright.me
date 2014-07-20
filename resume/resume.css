@@ -17,7 +17,7 @@ header {
 
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h4, h5 {
   font-family: "Cambria", serif;
   font-variant: small-caps;
 }
@@ -36,6 +36,7 @@ h3 {
   font-family: "Calibri", sans-serif;
   color: hsl(59, 100%, 10%);
   font-weight: normal;
+  font-variant: normal;
 
   margin: 0.4em 0;
 }
@@ -63,6 +64,10 @@ section#mission p {
 
 section#education p {
   text-align: center;
+}
+
+ul {
+  padding-left: 16px;
 }
 
 </style>

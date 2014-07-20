@@ -2,7 +2,7 @@
 
 # Eric Wright
 ## Software Engineer
-### (586)-944-9581 - Southfield, Michigan
+### Tokyo, Japan - 808-4108-4138
 #### dev@ericwright.me - http://ericwright.me
 
 </header>
@@ -23,7 +23,21 @@ Lawrence Technological University - May 2013
 
 ## Highlighted Work Experience
 
-December 2012 to May 2012 - **Boardwalk.io**
+July 2013 to Present - **Cerego Japan Inc.**
+
+**Lead Front End Engineer**
+
+Cerego creates products that make learning easier.
+I work on iKnow, a spaced repetition software for language vocabulary.
+iKnow's strength is its item scheduling system, heuristically designed to match the user's responses and create lasting memories.
+
+* Refactored traditional **Ruby on Rails** application with **React** and **CoffeeScript**.
+* Restructured hiring and development practices.
+* **Recruited** and **mentored** engineers, **reducing 10 years of technical debt piecemeal**.
+
+----
+
+December 2012 to May 2013 - **Boardwalk.io**
 
 **Software Engineer**
 
@@ -50,17 +64,4 @@ Users are free to make their own boards and delegate moderator status accordingl
 * Built with **Ruby on Rails** and deployed to **Heroku**.
 * Boards reflow for any screen size through the **Isotope layout framework**.
 * Posts scroll infinitely, **incentivizing users to never leave**.
-
-----
-
-July 2012 to September 2012 - **HubSpot Inc.**
-
-**DevOps Intern**
-
-HubSpot provides inbound marketing software that helps companies get found and make a solid presence on the web.
-I interned at HubSpot in **DevOps** to manage **over 1,000 EC2 instances**.
-
-* Solved chronic issue that frequently locked up our **Hadoop Cluster**.
-* **Lowered production costs** by removing previously untraceable EC2 instances.
-* **Recovered corrupted production MySQL database**.
 
