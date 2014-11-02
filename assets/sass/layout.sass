@@ -1,24 +1,28 @@
-@import 'normalize'
-@import 'compass'
+@import normalize
+@import compass
 
-@import url(http://fonts.googleapis.com/css?family=Raleway:700|Open+Sans)
+@import url("http://fonts.googleapis.com/css?family=Raleway:700|Open+Sans")
 
+*, *:before, *:after
+  +box-sizing(border-box)
 
 html
   height: 100%
 
 body
-  +box-sizing(border-box)
   background:
     size: cover
     repeat: no-repeat
     attachment: fixed
+
+  line-height: 1.5
   font:
     family: "Open Sans", sans-serif
     size: 18px
 
-  padding: 20px
-  line-height: 25px
+  padding: 30px 20px
+
+  height: 100vh
 
   &.index
     background-image: url('/images/ceo_bg_1.jpg')
@@ -40,7 +44,7 @@ h1
 
 h2
   font:
-    size: 1.8em
+    size: 2em
   line-height: 35px
 
 h4
@@ -63,9 +67,8 @@ ul
   padding: 0px 22px
   list-style-type: square
 
-
 .right-pane
-  width: 480px
+  width: 500px
   float: right
 
   &.expanded
@@ -114,13 +117,33 @@ ul
 
         &.selected
           background-color: hsla(0, 0%, 8%, 0.5)
+
         &:hover
           +transition-property(background-color)
           +transition-duration(250ms)
           border-bottom: 3px solid transparent
           background-color: hsla(0, 0%, 8%, 0.5)
 
+.github-profile
+  position: absolute
+  bottom: 5px
+  right: 20px
+
+  opacity: 0.75
+
+  &:hover
+    opacity: 1
+
+  img
+    display: block
+    width: 60px
+    height: 60px
+
 @media all and (max-width: 700px)
   .right-pane, .right-pane.expanded
     float: none
     width: 100%
+
+@media all and (max-height: 550px)
+  .github-profile
+    display: none

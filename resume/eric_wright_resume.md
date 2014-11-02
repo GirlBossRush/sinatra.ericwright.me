@@ -1,8 +1,8 @@
 <header>
 
 # Eric Wright
-## Software Engineer
-### Tokyo, Japan - 080-4108-4138
+## Product Engineer
+### Detroit, Michigan - 586-447-7799
 #### dev@ericwright.me - http://ericwright.me
 
 </header>
@@ -25,7 +25,7 @@ Lawrence Technological University - May 2013
 
 July 2013 to Present - **Cerego Japan Inc.**
 
-**Lead Front End Engineer**
+**Lead Front End Developer**
 
 Cerego creates products that make learning easier.
 I work on iKnow, a spaced repetition software for language vocabulary.

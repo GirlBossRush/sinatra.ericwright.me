@@ -3,8 +3,8 @@ html(lang="en")
   head
     title == title
 
-    link(href='/stylesheets/layout.css' rel='stylesheet' type="text/css")
-    link(href='/stylesheets/fonts.css' rel='stylesheet' type="text/css")
+    link(href="/stylesheets/layout.css" rel="stylesheet" type="text/css")
+    link(href="/stylesheets/fonts.css" rel="stylesheet" type="text/css")
 
     meta(name="author" content="Eric Wright")
     meta(name="description" content="I make web. Eric Wright's portfolio site.")
@@ -22,7 +22,7 @@ html(lang="en")
     == slim(:footer, layout: false)
 
     script(src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js")
-    script(src="scripts/ga.min.js")
-    script(src="scripts/blur.min.js")
+    script(src="/scripts/ga.min.js")
+    script(src="/scripts/blur.min.js")
     javascript:
       $('.box').blurjs({target: 'body', overlay: 'hsla(0,0%,100%, 0.5)', radius: 20, cache: true})
