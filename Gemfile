@@ -1,3 +1,5 @@
+ruby '2.1.3'
+
 source 'https://rubygems.org'
 
 gem 'eventmachine', '>=1.0.3'
