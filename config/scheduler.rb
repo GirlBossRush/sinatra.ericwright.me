@@ -1,5 +1,5 @@
 require 'rufus/scheduler'
-scheduler = Rufus::Scheduler.start_new
+scheduler = Rufus::Scheduler.new
 
 # If you're looking here and wondering what's going on below...
 # Thank you Heroku :)
