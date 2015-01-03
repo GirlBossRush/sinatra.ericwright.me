@@ -2,7 +2,7 @@
 
 # Eric Wright
 ## Product Engineer
-### Detroit, Michigan - 586-447-7799
+### Portland, Oregon - 586-447-7799
 #### dev@ericwright.me - http://ericwright.me
 
 </header>
@@ -39,7 +39,7 @@ iKnow's strength is its item scheduling system, heuristically designed to match 
 
 December 2012 to May 2013 - **Boardwalk.io**
 
-**Software Engineer**
+**Product Lead**
 
 Boardwalk is a personal website framework built to encourage vanity and sharing.
 Users can create their own whiteboard to fill with blog posts and photos.
@@ -52,16 +52,13 @@ Boardwalk is **open source** and currently in beta testing.
 
 ----
 
-September 2012 to December 2012 - **Ichiban.so**
+April 2012 to July 2012 - **Mango Languages Inc.**
 
-**Software Engineer**
+**Project Manager**
 
-Inspired by 4chan and Pintrest, Ichiban is an **open source** imageboard software.
-Users can create topics centered around interesting images and retain anonymity.
-The layout attempts to reduce unnecessary distractions and **exemplify user content**.
-Users are free to make their own boards and delegate moderator status accordingly.
+Mango Languages specializes in language learning software for consumers and libraries.
+Mango Languages contacted me to create a **Google Hangout application** called **Mango Skits**; a multiplayer game to be presented at **Google IO**.
 
-* Built with **Ruby on Rails** and deployed to **Heroku**.
-* Boards reflow for any screen size through the **Isotope layout framework**.
-* Posts scroll infinitely, **incentivizing users to never leave**.
-
+* Deployed from initial concept to production **1 month before deadline**.
+* Built on **Heroku** and **Twitter Bootstrap** using **Ruby on Rails**.
+* Collaborated with **Google** to harness their immature API.
